@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>영화 검색</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap");
+      * {
+        font-family: "IBM Plex Sans KR", sans-serif;
+      }
+
+      body {
+        color: white;
+        background-color: black;
+      }
+      .title {
+        padding: 10px;
+        text-align: center;
+      }
+      .search {
+        margin: 20px auto 20px auto;
+        width: 500px;
+      }
+
+      .card {
+        background-color: black;
+        color: white;
+        border: 3px solid;
+        border-radius: 10px;
+        width: 30%;
+      
+      }
+      #movie-container{
+        display: flex;
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+      #form{
+        display: flex;
+        flex-direction: row;
+      }
+      #submit{
+        margin-left: 10px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1 class="title">영화 검색 프로그램</h1>
+    <div class="search">
+      <form id="form"class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
+        <input
+          id="input"
+          type="text"
+          class="form-control form-control-dark text-bg-dark"
+          placeholder="Enter the movie title..."
+        />
+        <button id="submit" type="button" class="btn btn-success">Search</button>
+      </form>
+    </div>
+
+    <div id="movie-container"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>
